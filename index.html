@@ -7,113 +7,68 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style type="text/css">
-		body{
-			background-color: #F0F5F9;
-		}
-		.categories{
-			margin: 10px 20px;
-		}
-		.category-row{
-			width: 90%;
-			  margin: 2% auto;
-			  display: flex;
-			  flex-direction: row;
-			  flex-flow: row wrap;
-			  justify-content: center;
-		}
-		.category{
-			width: 300px;
-			  height: 100%;
-			  max-height: 350px;
-			  overflow: hidden;
-			  transform: translate3d(0, 0, 0);
-			  text-align: center;
-			  margin: 25px;
-			  position: relative;
-			  border-radius: 10px;
-		}
-		.category:hover .category-discription{
-			transform: translateY(0px);
-			transition: transform 300ms ease-out;
-		}
-		.category:hover .category-image{
-			filter: blur(5px);
-      transform: scale(1.2);
-      transition: all 200ms ease-out;
-		}
-		.category-image{
-				width: 250px;
-			  display: inline-block;
-			  overflow: hidden;
-			  transform: scale(1);
-			  filter: blur(0px);
-			  transition: all 200ms ease-out;
-		}
-		.category-discription{
-			position: absolute;
-			  width: 100%;
-			  bottom: 0;
-			  left: 0;
-			  right: 0;
-			  padding: 20px 10px;
-			  background: rgba(4,7,14,.8);
-			  font-family: Ubuntu, Arial, sans-serif;
-			  font-size: 1.3rem;
-			  color: white;
-			  transform: translateY(150%);
-			  transition: transform 300ms ease-in;
-		}
-		.category-title{
-			font-family: 'Sacramento', cursive;
-			  font-size: 2rem;
-			  color: blue;
-		}
-		.category-info{
-			padding-top: 10px;
-			  font-size: .9rem;
-			  color: white;
-			  font-weight: 100;
-			  text-align: center;
-		}
-		.footer{
-			background-color: #1E2022;
-			    color: #F0F5F9;
-			    padding: 40px;
-			    text-align: center;
-		}
-		.footer ul{
-			list-style: none;
-			padding: 0px;
-		}
-		.fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    margin: 10px;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-.fa-facebook {
-    background: #3B5998;
-    color: #F0F5F9;
-}
-.fa-twitter {
-    background: #55ACEE;
-    color: #F0F5F9;
-}
-.fa-google-plus{
-	background: #d34836;
-	color: #F0F5F9;
-}
-	</style>
-}
+	<link rel="stylesheet" type="text/css" href="style/styles.css"></head>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="images/logo.jpg" class="img-responsive" style="height: 60px; margin-left: 10px;"></a>
+    </div>
+   
+   <br>
+    <ul class="nav navbar-nav">
+
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            
+          <li class="dropdown-submenu"><a class="test" tabindex="-1" href="#">Category 1<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Product 1</a></li>
+          <li><a tabindex="-1" href="#">Product 1</a></li>
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          </ul>
+          </li>
+          <li class="dropdown-submenu"><a class="test" tabindex="-1" href="#">Category 2<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          </ul>
+          </li>
+          <li class="dropdown-submenu"><a class="test" tabindex="-1" href="#">Category 3<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          <li><a  tabindex="-1" href="#">Product 1</a></li>
+          </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+  
+
+  
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    </div>
+    
+    </div>
+    </nav>
+
+    
+
+
 
 	<div class="container">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -300,6 +255,16 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
 
 </body>
 </html>
