@@ -37,6 +37,7 @@ body{
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .category{
   width: 300px;
@@ -48,6 +49,7 @@ body{
   margin: 25px;
   position: relative;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 .category:hover .category-discription{
   transform: translateY(0px);
