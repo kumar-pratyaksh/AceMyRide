@@ -141,21 +141,45 @@ body{
   padding-bottom: : 20px;
   width: 100%;
 }
-#lowerLine{
+.lowerLine{
   border-width: 1px; 
   border-color: black;
 }
 .tab-pane{
   padding: 20px;
 }
-#data{
+.data{
   text-align: left;
 }
-#upperLine{
+.upperLine{
   border-width: 2px; 
   border-color: black;
 }
-#workAt{
+.workAt{
 
   padding-top: 20px;
+}
+.footer > div > [class*='col-sm-3']:before{
+  background: white;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  width: 1px;
+  top: 0;
+  height: 100%;
+  min-height: 100%;
+}
+.footer > div > [class*='col-sm-3']first-child:before{
+  display: none;
+  }
+.press{
+  color: orange;
+}
+
+.footer > div > [class*='col-sm-3']>a:hover{
+  color: lightblue;
+}
+.footer > div > [class*='col-sm-3']>a{
+  color: white;
 }
