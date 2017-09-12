@@ -128,3 +128,34 @@ body{
   background: #d34836;
   color: #F0F5F9;
 }
+
+.category-image1{
+  padding: 10px;
+  width: 100%;
+}
+.category-image2{
+  padding: 20px;
+  width: 60%;
+}
+.category-image3{
+  padding-bottom: : 20px;
+  width: 100%;
+}
+#lowerLine{
+  border-width: 1px; 
+  border-color: black;
+}
+.tab-pane{
+  padding: 20px;
+}
+#data{
+  text-align: left;
+}
+#upperLine{
+  border-width: 2px; 
+  border-color: black;
+}
+#workAt{
+
+  padding-top: 20px;
+}
